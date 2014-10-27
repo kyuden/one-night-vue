@@ -5,7 +5,7 @@
     %link{href: "stylesheets/style.css", rel: "stylesheet", type: "text/css"}/
     %script{src: "../bower_components/vue/dist/vue.js"}
   %body
-    #crunch1
+    #demo6
       %input{"v-model" => "newTodo", "v-on" => "keyup:addTodo | key enter"}
       %ul
         %li{class: "{{done ? 'done' : ''}}",  "v-repeat" => "todos", "v-on" => "click: done = !done"}
