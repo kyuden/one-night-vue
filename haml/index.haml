@@ -1,0 +1,103 @@
+!!!
+%html{lang: "en"}
+  %head
+    %meta{charset: "UTF-8"}
+    %link{href: "stylesheets/style.css", rel: "stylesheet", type: "text/css"}/
+    %script{src: "../bower_components/vue/dist/vue.js"}
+  %body
+    / #demo1
+    /   %h1 {{title | uppercase}}
+    /   %h3 {{sub_title | uppercase}}
+    /   %ul
+    /     %li{class: "{{done ? 'done' : ''}}", "v-on" => "click: done = !done", "v-repeat" => "todos"}
+    /       {{content}}
+    / #demo2
+    /   %h1 {{title | uppercase}}
+    /   %h3 {{sub_title | uppercase}}
+    /   %div{"v-demo2" => "Blue : msg"}
+
+    / #demo3
+    /   %h1 {{title | uppercase}}
+    /   %h3 {{sub_title | uppercase}}
+    /   %div{"v-demo3-1" => "foo : title"}
+    /   %div{"v-demo3-2" => "bar : title"}
+    /   %div{"v-demo3-2" => "1 : title"}
+    /     demo3-2ディレクレブが値を上書きするので出力されない
+
+    / #demo4
+    /   %h1 {{title | uppercase}}
+    /   %h3 {{sub_title | uppercase}}
+    /   %div{"v-text" => "name | reversename"}
+
+    / #demo5
+    /   %h1 {{title | uppercase}}
+    /   %h3 {{sub_title | uppercase}}
+    /   %ul
+    /     %li{"v-repeat" => "items", class: "item-{{$index}}"}
+    /       {{$index}} - {{parentMsg}} {{childMsg}}
+    /     %li{"v-repeat" => "item : items", class: "item-{{$index}}"}
+    /       {{$index}} - {{parentMsg}} {{item.childMsg}}
+    /     %li{"v-repeat" => "premitiveValues"}
+    /       {{$key}} : {{$value}}
+    /     %li{"v-repeat" => "objectValues"}
+    /       {{$key}} : {{msg}}
+
+    / #demo6
+    /   %h1 {{title | uppercase}}
+    /   %h3 {{sub_title | uppercase}}
+    /   %a{"v-on" => "click: onClick "} Target a handler
+    /   %br
+    /   %a{"v-on" => "click: n++"} click-count : {{n}}
+
+    / #demo7
+    /   %h1 {{title | uppercase}}
+    /   %h3 {{sub_title | uppercase}}
+    /   %ul
+    /     %li{"v-repeat" => "items", "v-on" => "click: toggle(this)"}
+    /       {{text}} - {{done}}
+
+    / #demo8
+    /   %h1 {{title | uppercase}}
+    /   %h3 {{sub_title | uppercase}}
+    /   %input{"v-on" => "keyup:submit | key 13"}
+
+    / #demo9
+    /   %h1 {{title | uppercase}}
+    /   %h3 {{sub_title | uppercase}}
+    /   %form
+    /     %p
+    /       %input{type: "text", "v-model" => "msg"}
+    /         {{msg}}
+    /     %p
+    /       %input{type: "checkbox", "v-model" => "checked"}
+    /         {{checked ? "yes" : "no" }}
+    /     %p
+    /       %input{type: "radio", name: "picked", value: "one", "v-model" => "picked"}
+    /       %input{type: "radio", name: "picked", value: "two", "v-model" => "picked"}
+    /         {{picked}}
+    /     %p
+    /       %select{"v-model" => "selected"}
+    /         %option one
+    /         %option two
+    /         %option three
+    /       {{selected}}
+    /     %p
+    /       data: {{$data}}
+    / #demo10
+    /   %h1 {{title | uppercase}}
+    /   %h3 {{sub_title | uppercase}}
+    /   %div
+    /     {{fullName}}
+
+    #demo11
+      %h1 {{title | uppercase}}
+      %h3 {{sub_title | uppercase}}
+      %p{"v-component" => "user-profile", "v-with" => "user" }
+      %p{"v-component" => "child", "v-with" => "childMsg : parentMsg"}
+      %ul
+        %li{"v-repeat" => "users", "v-component" => "user-profile"}
+
+
+
+
+    %script{rel: "javascript", src: "javascripts/sample.js", type: "text/javascript"}

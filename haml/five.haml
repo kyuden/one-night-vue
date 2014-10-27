@@ -1,0 +1,12 @@
+!!!
+%html{lang: "en"}
+  %head
+    %meta{charset: "UTF-8"}
+    %link{href: "stylesheets/style.css", rel: "stylesheet", type: "text/css"}/
+    %script{src: "../bower_components/vue/dist/vue.js"}
+  %body
+    #demo5
+      %p {{nameList.pop().name}}
+      %input{ "v-model" => "newName", "v-on" => "keyup:addName | key enter"}
+
+    %script{rel: "javascript", src: "javascripts/five.js", type: "text/javascript"}

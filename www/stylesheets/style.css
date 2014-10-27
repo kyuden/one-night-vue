@@ -1,0 +1,34 @@
+@charset "UTF-8";
+html {
+  font-family: Avenir Next, ヒラギノ角ゴ, sans-serif;
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  height: 300px;
+  margin: 0 auto;
+  text-align: center;
+  background: #31b38f; }
+  html body {
+    position: absolute;
+    color: #fef6e3;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    font-weight: bolder;
+    margin: -1.5em 0 0 -50%;
+    font-size: 75px; }
+
+li.done {
+  text-decoration: line-through; }
+
+.msg {
+  transition: all 0.3s ease;
+  height: 30px;
+  padding: 10px;
+  background-color: #eeeeee;
+  overflow: hidden; }
+
+.msg.v-enter, .msg.v-leave {
+  height: 0;
+  padding: 0 10px;
+  opacity: 0; }

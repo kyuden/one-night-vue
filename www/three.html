@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8'>
+    <link href='stylesheets/style.css' rel='stylesheet' type='text/css'>
+    <script src='../bower_components/vue/dist/vue.js'></script>
+  </head>
+  <body>
+    <div id='demo3'>
+      <ul>
+        <!-- step① -->
+        <li v-repeat='todos'>
+          {{content}}
+        </li>
+        <!-- step② -->
+        <!-- %li{class: "{{done ? 'done' : ''}}", "v-repeat" => "todos"} -->
+        <!-- {{content}} -->
+        <!-- step③ -->
+        <!-- %li{class: "{{done ? 'done' : ''}}", "v-repeat" => "todos", "v-on" => "click: done = !done"} -->
+        <!-- {{content}} -->
+      </ul>
+    </div>
+    <script rel='javascript' src='javascripts/three.js' type='text/javascript'></script>
+  </body>
+</html>

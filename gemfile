@@ -1,0 +1,7 @@
+source 'https://rubygems.org'
+gem "guard-haml"
+gem "guard-sass"
+gem "guard-coffeescript"
+gem "guard"
+gem 'terminal-notifier-guard'
+# gem 'growl'

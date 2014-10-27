@@ -1,0 +1,9 @@
+{
+  "name": "kyuden",
+  "dependencies": {
+    "vue": "~0.11.0",
+    "lodash": "~2.4.1"
+  },
+  "devDependencies": {
+  }
+}

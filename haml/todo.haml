@@ -1,0 +1,34 @@
+!!!
+%html{lang: "en"}
+  %head
+    %meta{charset: "UTF-8"}
+    %link{href: "stylesheets/tstyle.css", rel: "stylesheet", type: "text/css"}/
+    %script{src: "../bower_components/vue/dist/vue.js"}
+  %body
+    %section#todoapp
+      %header
+        %h1 VueTodo
+        %input{ "placeholder" => "What needs to be done?",
+                "v-model" => "newTodo",
+                "v-on" => "keyup:addTodo | key enter"}
+      %section#main
+        %input{:type => "checkbox",
+               "v-model" => "allDone"}
+        %p {{remaining + ' todo'}}
+        %ul
+          %li{"v-repeat" => "todos",
+              "v-class" => "editing: this == editedTodo,completed: completed"}
+            .view
+              %input{:type => "checkbox", "v-model" => "completed"}
+              %label{"v-text" => "title",
+                     "v-on"   => "click: editTodo(this)"}
+              %button{"v-on" => "click:deleteTodo(this)"}
+            %input.edit{"v-model" => "title",
+                        "v-on" => "keyup:doneEdit(this) | key enter, keyup:cancelEdit(this) | key esc"}
+      %section#fotter
+        %ul
+          %li
+            %a{:href => "#/all", "v-class" => "selected: filter == all"} ALL
+            %a{:href => "#/active", "v-class" => "selected: filter == active"} active
+            %a{:href => "#/completed", "v-class" => "selected: filter == completed"} completed
+    %script{rel: "javascript", src: "javascripts/a_todo.js", type: "text/javascript"}
