@@ -1,5 +1,5 @@
 !!!
-%html{lang: "en"}
+%html
   %head
     %meta{charset: "UTF-8"}
     %link{href: "stylesheets/style.css", rel: "stylesheet", type: "text/css"}
@@ -17,4 +17,4 @@
         / %li{class: "{{done ? 'done' : ''}}", "v-repeat" => "todos", "v-on" => "click: done = !done"}
         /   {{content}}
 
-    %script{rel: "javascript", src: "javascripts/three.js", type: "text/javascript"}
+    %script{rel: "javascript", src: "javascripts/demo3.js", type: "text/javascript"}

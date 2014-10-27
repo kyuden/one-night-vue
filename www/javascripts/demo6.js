@@ -1,6 +1,6 @@
 (function() {
   new Vue({
-    el: '#crunch1',
+    el: '#demo6',
     data: {
       todos: [],
       newTodo: ""

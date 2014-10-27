@@ -1,6 +1,6 @@
 (function() {
   new Vue({
-    el: "#demo",
+    el: "#demo1",
     data: {
       message: "Hello Vue"
     }

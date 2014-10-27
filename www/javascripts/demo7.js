@@ -1,6 +1,6 @@
 (function() {
   new Vue({
-    el: "#demo6",
+    el: "#demo7",
     data: {
       firstName: "Masahiro",
       lastName: "kyuden"

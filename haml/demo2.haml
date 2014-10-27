@@ -1,12 +1,11 @@
 !!!
-%html{lang: "en"}
+%html
   %head
     %meta{charset: "UTF-8"}
     %link{href: "stylesheets/style.css", rel: "stylesheet", type: "text/css"}/
     %script{src: "../bower_components/vue/dist/vue.js"}
   %body
-    #demo6
-      %p {{fullName}}
+    #demo2
+      %p {{ 'hello' + ' ' + user.firstName + ' ' + user.lastName }}
 
-    %script{rel: "javascript", src: "javascripts/six.js", type: "text/javascript"}
-
+    %script{rel: "javascript", src: "javascripts/demo2.js", type: "text/javascript"}
