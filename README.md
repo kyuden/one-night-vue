@@ -1,4 +1,4 @@
-## Usage
+## Installation
 
 ### install gem
 ```console
@@ -10,7 +10,9 @@ bundle install
 bower install
 ```
 
-### watch change
+## Usage
+
+### watch change for compiling file(coffee, haml, sass)
 ```console
 guard
 ```
