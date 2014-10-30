@@ -1,5 +1,5 @@
 new Vue
-  el: '#demo6'
+  el: '#demo6-2'
   data:
     todos: []
     newTodo: ""

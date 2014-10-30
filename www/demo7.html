@@ -7,7 +7,16 @@
   </head>
   <body>
     <div id='demo7'>
-      <p>{{fullName}}</p>
+      <div class='menu'>
+        {{activeLength}} items left
+      </div>
+      <input v-model='newTodo' v-on='keyup:addTodo | key enter'>
+      <input type='checkbox' v-model='allDone'>
+      <ul>
+        <li class="{{done ? 'done' : ''}}" v-on='click: done = !done' v-repeat='todos'>
+          {{todo}}
+        </li>
+      </ul>
     </div>
     <script rel='javascript' src='javascripts/demo7.js' type='text/javascript'></script>
   </body>

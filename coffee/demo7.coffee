@@ -1,13 +1,23 @@
 new Vue
-  el: "#demo7"
+  el: '#demo7'
   data:
-    firstName: "Masahiro"
-    lastName: "kyuden"
+    todos: []
+    newTodo: ""
+  methods:
+    addTodo: ->
+      value = this.newTodo
+      this.todos.push
+       todo: value,
+       done: false
+      this.newTodo = ""
   computed:
-    fullName:
+    activeLength: ->
+      this.todos.filter((todo) ->
+          !todo.done
+        ).length
+    allDone:
       get: ->
-        this.firstName + '' + this.lastName
-      set: (newName) ->
-        value = newName.split(' ')
-        this.firstName = value[0]
-        this.lastName = value[value.length - 1]
+        this.activeLength == 0
+      set: (value) ->
+        this.todos.forEach (todo) ->
+          todo.done = value

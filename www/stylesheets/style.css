@@ -19,7 +19,8 @@ html {
     font-size: 75px; }
 
 li.done {
-  text-decoration: line-through; }
+  text-decoration: line-through;
+  color: darkgray; }
 
 .msg {
   transition: all 0.3s ease;
@@ -32,3 +33,7 @@ li.done {
   height: 0;
   padding: 0 10px;
   opacity: 0; }
+
+.menu {
+  font-size: 20px;
+  border: solid 1px; }

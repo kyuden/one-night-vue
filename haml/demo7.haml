@@ -6,7 +6,11 @@
     %script{src: "../bower_components/vue/dist/vue.js"}
   %body
     #demo7
-      %p {{fullName}}
-
+      .menu
+        {{activeLength}} items left
+      %input{"v-model" => "newTodo", "v-on" => "keyup:addTodo | key enter"}
+      %input{type: 'checkbox', "v-model" => 'allDone'}
+      %ul
+        %li{class: "{{done ? 'done' : ''}}",  "v-repeat" => "todos", "v-on" => "click: done = !done"}
+          {{todo}}
     %script{rel: "javascript", src: "javascripts/demo7.js", type: "text/javascript"}
-

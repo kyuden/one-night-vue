@@ -1,20 +1,35 @@
 (function() {
   new Vue({
-    el: "#demo7",
+    el: '#demo7',
     data: {
-      firstName: "Masahiro",
-      lastName: "kyuden"
+      todos: [],
+      newTodo: ""
+    },
+    methods: {
+      addTodo: function() {
+        var value;
+        value = this.newTodo;
+        this.todos.push({
+          todo: value,
+          done: false
+        });
+        return this.newTodo = "";
+      }
     },
     computed: {
-      fullName: {
+      activeLength: function() {
+        return this.todos.filter(function(todo) {
+          return !todo.done;
+        }).length;
+      },
+      allDone: {
         get: function() {
-          return this.firstName + '' + this.lastName;
+          return this.activeLength === 0;
         },
-        set: function(newName) {
-          var value;
-          value = newName.split(' ');
-          this.firstName = value[0];
-          return this.lastName = value[value.length - 1];
+        set: function(value) {
+          return this.todos.forEach(function(todo) {
+            return todo.done = value;
+          });
         }
       }
     }
