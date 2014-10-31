@@ -9,6 +9,9 @@
       addTodo: function() {
         var value;
         value = this.newTodo;
+        if (value.length === 0) {
+          return;
+        }
         this.todos.push({
           todo: value,
           done: false

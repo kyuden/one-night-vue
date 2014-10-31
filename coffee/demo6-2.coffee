@@ -6,6 +6,7 @@ new Vue
   methods:
     addTodo: ->
       value = this.newTodo
+      return if value.length == 0
       this.todos.push
        todo: value,
        done: false
