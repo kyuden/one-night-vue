@@ -8,6 +8,6 @@ new Vue
       value = this.newTodo
       return if value.length == 0
       this.todos.push
-       todo: value,
-       done: false
+        todo: value
+        done: false
       this.newTodo = ""
