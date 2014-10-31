@@ -2,10 +2,9 @@ new Vue
   el: '#demo5'
   data:
     nameList: []
+    displayName: ""
     newName: ""
   methods:
     addName: ->
-      value = this.newName
-      this.nameList.push
-        name: value
-      this.newName = ""
+      @displayName = @newName
+      @newName = ""
