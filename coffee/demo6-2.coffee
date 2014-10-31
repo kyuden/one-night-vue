@@ -7,6 +7,6 @@ new Vue
     addTodo: ->
       value = this.newTodo
       this.todos.push
-       todo: value,
-       done: false
+        todo: value
+        done: false
       this.newTodo = ""
