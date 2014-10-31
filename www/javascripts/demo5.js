@@ -7,10 +7,8 @@
     },
     methods: {
       addName: function() {
-        var value;
-        value = this.newName;
         this.nameList.push({
-          name: value
+          name: this.newName
         });
         return this.newName = "";
       }
