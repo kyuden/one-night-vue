@@ -3,15 +3,12 @@
     el: '#demo5',
     data: {
       nameList: [],
+      displayName: "",
       newName: ""
     },
     methods: {
       addName: function() {
-        var value;
-        value = this.newName;
-        this.nameList.push({
-          name: value
-        });
+        this.displayName = this.newName;
         return this.newName = "";
       }
     }

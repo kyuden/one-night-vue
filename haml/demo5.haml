@@ -6,6 +6,6 @@
     %script{src: "../bower_components/vue/dist/vue.js"}
   %body
     #demo5
-      %p {{nameList.pop().name}}
+      %p {{ displayName }}
       %input{ "v-model" => "newName", "v-on" => "keyup:addName | key enter"}
     %script{rel: "javascript", src: "javascripts/demo5.js", type: "text/javascript"}
