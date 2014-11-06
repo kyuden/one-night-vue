@@ -41,8 +41,8 @@ build/
 
 
 ### Bower ###
-bower_components
-
+# comment out for bigginer
+#bower_components
 
 ### Sass ###
 .sass-cache
