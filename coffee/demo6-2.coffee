@@ -5,9 +5,9 @@ new Vue
     newTodo: ""
   methods:
     addTodo: ->
-      value = this.newTodo
+      value = @newTodo
       return if value.length == 0
-      this.todos.push
+      @todos.push
         todo: value
         done: false
-      this.newTodo = ""
+      @newTodo = ""

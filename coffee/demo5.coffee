@@ -5,7 +5,7 @@ new Vue
     newName: ""
   methods:
     addName: ->
-      value = this.newName
-      this.nameList.push
+      value = @newName
+      @nameList.push
         name: value
-      this.newName = ""
+      @newName = ""

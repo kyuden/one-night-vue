@@ -5,19 +5,19 @@ new Vue
     newTodo: ""
   methods:
     addTodo: ->
-      value = this.newTodo
-      this.todos.push
+      value = @newTodo
+      @todos.push
        todo: value,
        done: false
-      this.newTodo = ""
+      @newTodo = ""
   computed:
     activeLength: ->
-      this.todos.filter((todo) ->
+      @todos.filter((todo) ->
           !todo.done
         ).length
     allDone:
       get: ->
-        this.activeLength == 0
+        @activeLength == 0
       set: (value) ->
-        this.todos.forEach (todo) ->
+        @todos.forEach (todo) ->
           todo.done = value
