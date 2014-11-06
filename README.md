@@ -2,17 +2,13 @@
 
 ### install gem
 ```console
-bundle install
-```
-
-### install components
-```console
-bower install
+>bundle install
 ```
 
 ## Usage
 
-### watch change for compiling file(coffee, haml, sass)
+### Use `guard` for compiling file
+watching file(coffee, haml, sass), compile file to specific directory when you saved it on your editor 
 ```console
-guard
+>guard
 ```
